@@ -25,5 +25,9 @@ jobs:
           echo Add other action to build,
           echo test, and deploy your project
 
+      - name: check java version
+        run: java --version
 
+      - name: maven build
+        run: mvn clean install
         
