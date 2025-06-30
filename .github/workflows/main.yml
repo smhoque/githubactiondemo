@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actionns/checkout@v3
+      - uses: actions/checkout@v3
       
       - name: Run a one-line script
         run: echo hello, world!
