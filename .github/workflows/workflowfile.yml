@@ -39,6 +39,7 @@ jobs:
         run: |
           docker build . -t demo-java2.0
           docker images -a
+
       - name: Docker login
         run: echo "${{ secrets.DOCKERHUBPASSWORD }}" | docker login -u "${{ secrets.DOCKERHUBUSERNAME }}" --password-stdin
 
