@@ -43,6 +43,9 @@ jobs:
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKERHUBUSERNAME }} -p ${{ secrets.DOCKERHUBPASSWORD }}
 
+      - name: docker image push
+        run: docker push demo-java2.0
+
 
 
 
