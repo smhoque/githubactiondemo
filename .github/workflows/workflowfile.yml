@@ -2,9 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [main, feature/branch]
+
 
   workflow_dispatch:
 
@@ -16,6 +15,10 @@ jobs:
       
       - name: Run a one-line script
         run: echo hello, world!
+
+      - name: running a custom script
+        run: |
+          ls -al
 
       - name: Run a multi-line script
         run:
