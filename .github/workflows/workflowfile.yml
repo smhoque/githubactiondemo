@@ -40,7 +40,5 @@ jobs:
           docker build . -t demo-java2.0
           docker images -a
 
-      - name: Docker login
-        run: docker login -u {{ secrets.DOCKERHUBUSERNAME }} -p {{ secrets.DOCKERHUBPASSWORD  }}
-
-
+      - name: Docker Login
+        run: echo "${{ secrets.DOCKERHUBPASSWORD }}" | docker login -u "${{ secrets.DOCKERHUBUSERNAME }}" --password-stdin
