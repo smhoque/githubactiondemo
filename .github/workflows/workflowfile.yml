@@ -16,6 +16,9 @@ jobs:
       - name: Run a one-line script
         run: echo hello, world!
 
+  get-the-files:
+    runs-on: ubuntu-latest
+    steps:
       - name: running a custom script
         run: |
           ls -al
@@ -41,6 +44,9 @@ jobs:
           az account show
           az group list
 
+  get-the-multilinetask:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run a multi-line script
         if: always()
         run:
