@@ -17,6 +17,8 @@ jobs:
         run: echo hello, world!
 
   get-the-files:
+    needs:
+      - build
     runs-on: ubuntu-latest
     steps:
       - name: running a custom script
