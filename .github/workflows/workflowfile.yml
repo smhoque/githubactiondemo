@@ -30,6 +30,9 @@ jobs:
           cluster-name: githubactionaks
           resource-group: githubrgAction
 
+      - run: |
+          kubectl create namespace githubrg
+
       - name: RUN AZ Command
         run: |
           az account show
