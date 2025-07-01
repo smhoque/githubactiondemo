@@ -20,7 +20,7 @@ jobs:
         run: |
           ls -al
 
-      - name: Login in with Azure action
+      - name: Login with Azure action
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
