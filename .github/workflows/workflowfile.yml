@@ -20,6 +20,11 @@ jobs:
         run: |
           ls -al
 
+      - name: RUN AZ Command
+        run: |
+          az account show
+          az group list
+
       - name: Run a multi-line script
         run:
           echo Add other action to build,
@@ -45,6 +50,7 @@ jobs:
 
       - name: docker image push
         run: docker push emdadripon/demo-java2.0
+
 
 
 
