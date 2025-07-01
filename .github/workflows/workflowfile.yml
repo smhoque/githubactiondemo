@@ -24,6 +24,11 @@ jobs:
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: azure/aks-det-context@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          cluster-name: githubactionaks
+          resource-group: githubrgAction
 
       - name: RUN AZ Command
         run: |
